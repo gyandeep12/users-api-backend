@@ -1,9 +1,10 @@
+require("dotenv").config()
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 const Student = require("./models/students")
 const cors = requrie("cors")
-const port = 8000
+const port = process.env.PORT || 8000
 
 // index page 
 app.get("/", (req, res) => {
